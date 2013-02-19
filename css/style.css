@@ -1,0 +1,166 @@
+/*************************************************** Overrides *****************************************************/
+@font-face { font-family: trajan; src: url('fonts/TrajanPro-Regular.otf'); }
+@font-face { font-family: trajanBold; font-weight: bold; src: url('fonts/TrajanPro-Regular.otf'); } 
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;text-shadow: none;}
+.ui-page {-webkit-backface-visibility: hidden !important;}
+.ui-content .ui-listview{margin:0 !important;}
+.in,.out {-webkit-animation-fill-mode: both !important;-moz-animation-fill-mode: both !important;-moz-animation-duration: 500ms !important;-webkit-animation-duration: 500ms !important}
+body{font-size:12px !important}
+/*************************************************** Common.css ****************************************************/
+#page2.ui-content{background: #ebffec;background: -moz-linear-gradient(top,  #ebffec 0%, #ecf08a 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebffec), color-stop(100%,#ecf08a));background: -webkit-linear-gradient(top,  #ebffec 0%,#ecf08a 100%);background: -o-linear-gradient(top,  #ebffec 0%,#ecf08a 100%);background: -ms-linear-gradient(top,  #ebffec 0%,#ecf08a 100%);background: linear-gradient(to bottom,  #ebffec 0%,#ecf08a 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebffec', endColorstr='#ecf08a',GradientType=0 );overflow-x: hidden;overflow-y: hidden !important;font-family: trajan !important;font-size: 12px;font-weight: normal;padding: 0;}
+#page2>div {float: left;height: 100%;margin: 0;width: 100%;}
+.contentWrapper {float: left;padding: 15px;width: 100%;}
+.ui-li-thumb{ width:160px;height:160px;}
+.ui-select>div{width: 100%; height: 100%; float: left;}
+table{font-family: Verdana; font-size: 14px;}
+.noData{height: 100px;line-height: 100px;text-align: center;width: 100%;}
+.label_bg{background: #ceffe1;background: -moz-linear-gradient(top,  #ceffe1 0%, #8dbd9e 50%, #67a074 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ceffe1), color-stop(50%,#8dbd9e), color-stop(100%,#67a074));background: -webkit-linear-gradient(top,  #ceffe1 0%,#8dbd9e 50%,#67a074 100%);background: -o-linear-gradient(top,  #ceffe1 0%,#8dbd9e 50%,#67a074 100%);background: -ms-linear-gradient(top,  #ceffe1 0%,#8dbd9e 50%,#67a074 100%);background: linear-gradient(to bottom,  #ceffe1 0%,#8dbd9e 50%,#67a074 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceffe1', endColorstr='#67a074',GradientType=0 );}
+.transparentButton,.bigButton{background: -moz-linear-gradient(top,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.2) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.8)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.2)));background: -webkit-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.2) 100%);background: -o-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.2) 100%);background: -ms-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.2) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.2) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#33ffffff',GradientType=0 );}
+.bigButton{-webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.37);-moz-box-shadow:0px 2px 7px rgba(0, 0, 0, 0.37);box-shadow:0px 2px 7px rgba(0, 0, 0, 0.37);border:1px solid rgba(0,0,0,0.3);text-shadow: 10px 0px 50px #ffffff;}
+.bigButton:active{-webkit-box-shadow: -37px 65px 0px rgba(255, 0, 0, 1) inset;-moz-box-shadow:-37px 65px 0px rgba(255, 0, 0, 1) inset;box-shadow:-37px 65px 0px rgba(255, 0, 0, 1) inset;background: -moz-linear-gradient(top,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 32%, rgba(255,255,255,0) 62%, rgba(255,255,255,0.2) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.8)), color-stop(32%,rgba(255,255,255,0.6)), color-stop(62%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.2)));background: -webkit-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.6) 32%,rgba(255,255,255,0) 62%,rgba(255,255,255,0.2) 100%);background: -o-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.6) 32%,rgba(255,255,255,0) 62%,rgba(255,255,255,0.2) 100%);background: -ms-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.6) 32%,rgba(255,255,255,0) 62%,rgba(255,255,255,0.2) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.6) 32%,rgba(255,255,255,0) 62%,rgba(255,255,255,0.2) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#33ffffff',GradientType=0 );}
+.fadeBox{background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+#page2 .contentWrapper.listView{padding:0;}
+.contentWrapper:not(.listView) img{max-width: 100%}
+/*************************************************** Footer active Button Styles ***************************************************/
+.ui-btn-text{font-size: 0.8em !important}
+.forceActiveLink{background: #5393c5 !important;background: -moz-linear-gradient(left,  #5393c5 0%, #6facd5 100%) !important;background: -webkit-gradient(linear, left top, right top, color-stop(0%,#5393c5), color-stop(100%,#6facd5)) !important;background: -webkit-linear-gradient(left,  #5393c5 0%,#6facd5 100%) !important;background: linear-gradient(to right,  #5393c5 0%,#6facd5 100%) !important;filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5393c5', endColorstr='#6facd5',GradientType=1 ) !important;}
+/*************************************************** menu ********************************************************************/
+#typeToggle{background: none repeat scroll 0 0 #DADADA;height: 6em;padding: 0.5em 0;width: 100%;}
+#typeToggle>a{color: transparent;display: inline-block;height: 5em;text-align: right;width: 50%;}
+#typeToggle>a>span {display: block;height: 100%;width: 95%;color: white;font-size: 2em;line-height: 2.5em;text-align: center;width: 95%;}
+/*.menu .toggleLeft>span {background : url("../images/lunch_toggle_inactive.png") no-repeat scroll border-box left center transparent;background-size: 100% 100%;}
+.menu .toggleLeft>span:active{background : url("../images/lunch_toggle_active.png") no-repeat scroll border-box left center transparent;background-size: 100% 100%;}
+.menu .toggleRight>span {background : url("../images/dinner_toggle_inactive.png") no-repeat scroll border-box right center transparent;background-size: 100% 100%;}
+.menu .toggleRight>span:active{background : url("../images/dinner_toggle_active.png") no-repeat scroll border-box left center transparent;background-size: 100% 100%;} */
+.toggleLeft>span{background: #9ad360;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlhZDM2MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ODhkNDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background: -moz-linear-gradient(top,  #9ad360 0%, #688d41 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9ad360), color-stop(100%,#688d41));background: -webkit-linear-gradient(top,  #9ad360 0%,#688d41 100%);background: -o-linear-gradient(top,  #9ad360 0%,#688d41 100%);background: -ms-linear-gradient(top,  #9ad360 0%,#688d41 100%);background: linear-gradient(to bottom,  #9ad360 0%,#688d41 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ad360', endColorstr='#688d41',GradientType=0 );-webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.21) inset;-moz-box-shadow:0px 0px 5px rgba(255, 255, 255, 0.21) inset;box-shadow:0px 0px 5px rgba(255, 255, 255, 0.21) inset; border-radius: 5px 0 0 5px; -moz-border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px; -o-border-radius: 5px 0 0 5px;float: right;width: 90%;float: right;}
+.toggleLeft>span:active,.toggleLeft>span.active{box-shadow: inset 0px 0px 8px 3px rgba(255,255,255,0.21), inset 24px 0px 27px 3px rgba(0,0,0,0.95);-webkit-box-shadow: inset 0px 0px 8px 3px rgba(255,255,255,0.21), inset 12px 0px 27px 3px rgba(0,0,0,0.95);-moz-box-shadow: inset 0px 0px 8px 3px rgba(255,255,255,0.21), inset 12px 0px 27px 3px rgba(0,0,0,0.95);-o-box-shadow: inset 0px 0px 8px 3px rgba(255,255,255,0.21), inset 12px 0px 27px 3px rgba(0,0,0,0.95);}
+.toggleRight>span{background: #ce4141;background: -moz-linear-gradient(top,  #ce4141 0%, #a53232 50%, #6d1d1d 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce4141), color-stop(50%,#a53232), color-stop(100%,#6d1d1d));background: -webkit-linear-gradient(top,  #ce4141 0%,#a53232 50%,#6d1d1d 100%);background: -o-linear-gradient(top,  #ce4141 0%,#a53232 50%,#6d1d1d 100%);background: -ms-linear-gradient(top,  #ce4141 0%,#a53232 50%,#6d1d1d 100%);background: linear-gradient(to bottom,  #ce4141 0%,#a53232 50%,#6d1d1d 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce4141', endColorstr='#6d1d1d',GradientType=0 );-webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.21) inset;-moz-box-shadow:0px 0px 5px rgba(255, 255, 255, 0.21) inset;box-shadow:0px 0px 5px rgba(255, 255, 255, 0.21) inset; border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0; -webkit-border-radius: 0 5px 5px 0; -o-border-radius: 0 5px 5px 0;float: left;width: 90%;float: left;}
+.toggleRight>span:active,.toggleRight>span.active{box-shadow: inset 0px 0px 8px 3px rgba(255,2,2,0.18), -24px 0px 22px 3px rgba(0,0,0,0.95) inset;-webkit-box-shadow: inset 0px 0px 8px 3px rgba(255,2,2,0.18), -24px 0px 22px 3px rgba(0,0,0,0.95) inset;-moz-box-shadow: inset 0px 0px 8px 3px rgba(255,2,2,0.18),-24px 0px 22px 3px rgba(0,0,0,0.95) inset;-o-box-shadow: inset 0px 0px 8px 3px rgba(255,2,2,0.18), -24px 0px 22px 3px rgba(0,0,0,0.95) inset;}
+/*************************************************** menu Item Description ***************************************************/
+#menuItemOrderHead{float: left;width: 100%;height: 94px;font-size:12px}
+#menuItemOrderFBLike{cursor: pointer;float: left;height: 100%;width: 25%;}
+#menuItemOrderFBLike>img{display: block;margin-left: auto;margin-right: auto;max-width: 97px;width: 100%;}
+#menuItemOrderFBLike:active{background: url('../images/likeit_pressed.png') no-repeat scroll center center transparent;}
+#menuItemOrderName{ display: inline;float: left;font-size: 1.25em;line-height: 100%;margin: 0;overflow: hidden;padding: 2em 0;text-align: center;text-overflow: ellipsis;white-space: nowrap;width: 50%;}
+#menuItemOrderName>span{display: table-cell; vertical-align: middle;}
+#menuItemOrderPrice{display: table;float: left;height: 100%;max-height: 97px;position: relative;text-align: center;width: 25%;}
+#menuItemOrderPrice>span{display: table-cell; vertical-align: middle;font-size: 1.2em;}
+.imageSlider{border-radius: 5px;display: block;float: left;height: 183px;margin: 1% 0;max-width: 320px;overflow: hidden;position: relative;width: 100%;}
+.imageSlider .imgContent{float: left;height: 100%;left: 0;position: absolute;top: 0;width: 200%;}
+.imageSlider .imgContent img{float:left;}
+.imageBreadCrumb{position: absolute; left: 45%; bottom: 5px; opacity: 0.5;}
+.imageBreadCrumb>span{float: left; height: 7px; width: 7px; border-radius: 7px; margin: 0 5px; background: grey}
+.imageBreadCrumb .active{background: white;}
+#menuItemOrderScreen UL{float: left; width: 100%; margin: 0px;}
+/*************************************************** About ***************************************************/
+.about-logo{text-align:center;margin-bottom: 15px;margin-bottom: 70px;}
+/*************************************************** Home Screen ****************************************************/
+/*Ebony Screen Specific Styles*/
+[data-container="home"]{background-attachment: scroll;background-clip: padding-box;background-color: transparent;background-image: url("../images/screen_bg.png");background-origin: padding-box;background-position: center center;background-repeat: no-repeat;background-size: 100% 100%;}
+/*Generic Home Page Styles*/
+[data-container="home"]{float: left;font-size: 12px;padding: 0px;width: 100%; height: auto;}
+[data-container="home"] .homeHead{display: table;float: left;width: 100%;}
+[data-container="home"] .homeHead .homeIcon{border-radius: 12px;-webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);float: left;padding: 25px 0;text-align: center;width: 60%;}
+[data-container="home"] .homeHead .callButton{width: 40%; text-align: center; float: left;}
+[data-container="home"] .homeHead .homeIcon img,[data-container="home"] .homeHead .callButton img{max-width: 80%;}
+[data-container="home"] .homeButtons{float: left;width: 100%}
+[data-container="home"] .homeButtons a.whatshot{border: 1px solid rgba(0, 0, 0, 0.3);border-radius: 12px;color: black;float: left;font-size: 2em;font-weight: normal;height: 150px;line-height: 150px;margin: 25px 0 10px;text-align: center;text-decoration: none;width: 100%;}
+[data-container="home"] .homeButtons a.whatshot:hover{color:black}
+[data-container="home"] .homeButtons a.whatshot.active{-moz-box-shadow: 0 0px 75px rgba(255, 0, 0, 1) inset;-wekit-box-shadow: 0 0px 75px rgba(255, 0, 0, 1) inset;box-shadow: 0 0px 75px rgba(255, 0, 0, 1) inset;color:black;}
+[data-container="home"] .homeButtons a.branding{border-radius: 15px;float: right;padding: 4px 10px;color: black;font-weight: normal;text-decoration: none;outline:0 none;background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 )}
+/*************************************************** locations *****************************************************/
+#locationMap{display: block;height: 100%;width: 100%;margin: 0 -30px 0 0 !important;}
+/*************************************************** Reservation ***************************************************/
+[data-container="reservation"],[data-container="reservation"] label, [data-container="reservation"] input{float: left; width: 100%; height: 100%;}
+/*************************************************** Contact us ****************************************************/
+#contactus-info-container {margin: 0px auto;clear:both;width:90%;padding:0 3% 3% 3%;height:auto;}
+#contactus-info-container img {width:18%;}
+.contactus-link{ text-decoration: none; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.contactus-row {width:90%;float:left;padding-bottom:10px;margin:auto;background-color:#ffffff;padding: 2% 5%; }
+.contactus-row:first-child {padding-top:5%; border-bottom:1px solid #ffffff; border-radius:10px 10px 0 0;}
+.contactus-text-block{ float:left;border-radius:5px;padding:5% 3%;width:70%;margin-left:6%;}
+.contactus-text-block  > a {dispaly:block;float:left;color:#000000;}
+.contactus-text-block  > a, .contactus-text-block  > a:visited,  .contactus-text-block  > a:hover, .contactus-text-block  > a:active,{dispaly:block;float:left;color:#000000;}
+ div .contactus-text-block  a.ui-link , div .contactus-text-block  a.ui-link:visited, div .contactus-text-block  a.ui-link:hover, div .contactus-text-block  a.ui-link:active{color:#000000;} 
+.contactus-text-block-phone{font-size:10px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.contactus-text-block-background {background-color: #9AD360;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9AD360), to(#688D41));background: -webkit-linear-gradient(top, #9AD360, #688D41);background: -moz-linear-gradient(top, #9AD360, #688D41);background: -ms-linear-gradient(top, #9AD360, #688D41);background: -o-linear-gradient(top, #9AD360, #688D41);}
+.about-logo img{max-height: 50%;max-width: 35%;width: 100%;}
+.operatingText,.contactwebLink{color: black !important;float: left;font-weight: normal !important;margin: 15px 0 25px;text-align: center;text-decoration: none;width: 100%;}
+/*************************************************** Order *********************************************************/
+.order-background {background-color: #9AD360;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#688D41));background: -webkit-linear-gradient(top, #ffffff, #C3D975);background: -moz-linear-gradient(top, #ffffff, #C3D975);background: -ms-linear-gradient(top, #ffffff, #C3D975);background: -o-linear-gradient(top, #ffffff, #C3D975);border-radius:10px;margin: 2% 0;padding: 3% 2%;width: 86%;float: left;}
+#page2 >  div[data-container="MyOrdersWrapper"] {margin : 15px 0;width:100%;float:left;}
+.order-background-edit {background-color: #9AD360;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#688D41));background: -webkit-linear-gradient(top, #ffffff, #C3D975);background: -moz-linear-gradient(top, #ffffff, #C3D975);background: -ms-linear-gradient(top, #ffffff, #C3D975);background: -o-linear-gradient(top, #ffffff, #C3D975);border-radius:10px;margin: 2% 0;padding: 3% 1%;width: 86%;float:left;}
+.hide-delete-order-button {/*display : none;*/}
+ul#myorderlist {list-style-type:none;padding:0px;margin:0;}
+.icon-div {icon-div}
+.parent-div { display: -webkit-flex; display: -moz-flex;display: flex;}
+.text-div { white-space: nowrap;overflow: hidden;text-overflow: ellipsis;  min-width: 0; display: block;}
+.order-item-original-price-div {float:left;width:20%;text-align:right;text-decoration:line-through;}
+.order-item-discount-price-div {float:left;width:20%;text-align:right;}
+.order-item-original-price-div {float:left;width:40%;text-align:right;}
+.delete-item {width:9%;float:left;margin:10% 1% 0 0;}
+.delete-item > img{ width:100%; }
+.order-item-img-div {width:30%;float:left;}
+.order-item-text-div {width:67%;float:left;margin-left:3%;vertical-align:top;margin-top:3px;}
+.order-item-text-div > div.parent-div > h3 {margin-top:0;clear:both;}
+.order-item-price-div {margin-top:0;clear:both;padding-top:-1%;font-size:1em;}
+.order-item-quantity-div {float:left;width:60%;}
+.order-item-quantity-first-span{width:50%;float:left;}
+.order-item-quantity-second-span{width:10%;float:left;}
+.itemquantity{width:37%;float:left;}
+#list-total-prices{width:100%;float:left;overflow-y:auto;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#8FC459));background: -webkit-linear-gradient(top, #ffffff, #8FC459);background: -moz-linear-gradient(top, #ffffff, #8FC459);background: -ms-linear-gradient(top, #ffffff, #8FC459);background: -o-linear-gradient(top, #ffffff, #8FC459);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8FC459',GradientType=1 );}
+#list-total-prices-img-div {width:20%;float:left;}
+#list-total-prices-img-div > img {width:100%;}
+#list-total-prices-text-div {width:75%;padding-left:5%;float:left;margin-top:3%;}
+.list-total-prices-text-div-first-span {width:70%;float:left;padding-bottom:2%;}
+.list-total-prices-text-div-second-span {width:28%;float:left;text-align:right;padding-right:2%;}
+.grand-total-color {color:#ff0000;}
+.order-items-actions-div {background-color: #8FC459;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#8FC459));background: -webkit-linear-gradient(top, #ffffff, #8FC459);background: -moz-linear-gradient(top, #ffffff, #8FC459);background: -ms-linear-gradient(top, #ffffff, #8FC459);background: -o-linear-gradient(top, #ffffff, #8FC459);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8FC459',GradientType=1 );float: left;width:100%;padding:1% 0;margin: 0% -15px;padding-right: 30px;margin-top: 10%;position:fixed;bottom:9%;}
+#order-item-price {text-decoration:none;}
+.order-items-actions-div .ui-btn {background-color: #8FC459;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#8FC459));background: -webkit-linear-gradient(top, #ffffff, #8FC459);background: -moz-linear-gradient(top, #ffffff, #8FC459);background: -ms-linear-gradient(top, #ffffff, #8FC459);background: -o-linear-gradient(top, #ffffff, #8FC459);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8FC459',GradientType=1 );}
+.order-items-actions-div > a.Edit-Done-Buttons > span.ui-btn-inner, .order-items-actions-div > a#submit-order > span.ui-btn-inner{padding-right:5px;padding-left:5px;}
+a.Edit-Done-Buttons {margin-left:15px;}
+.order-items-actions-div a.ui-btn-up-c {border:1px solid #8FC459;}
+.itemquantity > .text-itemquantity {width:100%;margin-top:-5px;padding:0;font-size:1em;text-align:center;}
+.item-name {margin-bottom:10px;}
+/*************************************************** Reviews *******************************************************/
+textarea#myreviews-textarea {background-color: #9AD360;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9AD360), to(#688D41));background: -webkit-linear-gradient(top, #9AD360, #688D41);background: -moz-linear-gradient(top, #9AD360, #688D41);background: -ms-linear-gradient(top, #9AD360, #688D41);background: -o-linear-gradient(top, #9AD360, #688D41);height: 150px;}
+.userreview-contianer .ui-li .ui-btn-inner a.ui-link-inherit, .userreview-contianer .ui-li-static.ui-li { display: block; float: left; padding: 0.7em 15px; width: 100%;}
+.userreview-contianer > h3 {text-align:center;padding:10px 0;}
+.userreview-contianer > ul > li > div {width:100%;float:left;}
+.rating-div {float:left;width:30%;}
+.reviews-div {float:left;width:69%; margin-left: 1%;}
+div[data-container = 'Myreviews'] {text-align:center;}
+.showRating {padding-bottom:20px;width:250px;margin:auto;}
+.green-background {background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#8FC459));background: -webkit-linear-gradient(top, #ffffff, #8FC459);background: -moz-linear-gradient(top, #ffffff, #8FC459);background: -ms-linear-gradient(top, #ffffff, #8FC459);background: -o-linear-gradient(top, #ffffff, #8FC459);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8FC459',GradientType=1 );}
+.userreview-contianer > ul > li { float: left; width: 100%; margin:0%;}
+.userreview-contianer .ui-li .ui-btn-inner a.ui-link-inherit{ float: left; width: 98%; padding:0.7em 1%;}
+.review-contianer{float: left; width: 100%;border:solid 1px;height:75px;}
+.review-contianer>span:first-child{width: 22%; display: block; float: left;padding:19px;}
+.review-contianer>span:last-child{float: left; width: 70%;border-left:1px solid;padding:28px;}
+/*************************************************** Hot Deals *****************************************************/
+[data-container="dealsWrapper"]{background: url("../images/hotdeals_bg.png") repeat scroll 0% 0% transparent;}
+/*************************************************** Signature Menu ************************************************/
+#contentSlider{float:left;width:100%}
+#contentSlider>div{display: inline-block; float:left;text-align: center;}
+#contentSlider>div img{max-width:100%;height:100%}
+#signatureSwipeLeft,#signatureSwipeRight{display: table;height: 100%;max-width: 117px;position: fixed;top: 0;width: 25%;z-index: 1;}
+#signatureSwipeLeft{left: 0}
+#signatureSwipeRight{right: 0}
+#signatureSwipeLeft>div,#signatureSwipeRight>div{width: 100%; height: 100%; display: table-cell; vertical-align: middle;}
+#signatureSwipeRight>div>span,#signatureSwipeLeft>div>span{cursor: pointer;height: 30%;width: 100%;background-attachment: scroll;background-clip: border-box;background-color: transparent;background-origin: padding-box;background-repeat: no-repeat;background-size: auto 100%;}
+#signatureSwipeLeft>div>span{background-image: url("../images/signature_swipe_left.png");background-position: left center;float: left;}
+#signatureSwipeRight>div>span{background-image: url("../images/signature_swipe_right.png");background-position: right center;float: right;}
+.contentWrapper.SignatureMenu{padding: 0;}
+/**************************************************** Teaser & Table (Generic) Menu **************************************************/
+#page2 .teaserView,#page2 .tableView{float: left; width: 100%; margin-bottom: 0 !important;}
+#page2 .teaserView .Trigger,#page2 .tableView .Trigger{ -moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;border: 1px solid rgba(0, 0, 0, 0.3);border-radius: 5px;cursor: pointer;float: left;font-family: Times New Roman;font-size: 1.2em;font-weight: normal;margin: 10px 0;min-width: 100%;padding: 10px;text-decoration: none;}
+#page2 .teaserView .Trigger:nth-child(odd),#page2 .tableView .Trigger:nth-child(odd){background: none repeat scroll 0 0 white;color:black !important;}
+#page2 .teaserView .Trigger:nth-child(even),#page2 .tableView .Trigger:nth-child(even){background: none repeat scroll 0 0 gray;color:white !important;}
+#page2 .teaserView .Trigger .Title,#page2 .tableView .Trigger .Title{ border-radius: 5px;color: black;float: left;height: 2em;line-height: 2em;margin: 0 0 10px;overflow: hidden;text-align: center;text-overflow: ellipsis;white-space: nowrap;width: 100%;}
+#page2 .teaserView,#page2 .tableView{float: left; text-align: center;}
+#page2 .teaserView img,#page2 .tableView img{float:left;width:100%;}
+#page2 .teaserView  td,#page2 .tableView td{text-align:start}
+/**************************************************** Teaser Menu ********************************************************/
+/* #page2 .teaserThumb{margin: -10px;} */
+#page2 .teaserThumb > img{width: 100%; height: 100%;max-height: 8em;}

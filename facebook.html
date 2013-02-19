@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content='True' name='HandheldFriendly' />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>Emunching</title>
+	<style>
+		body{margin:0;padding:0;float:left;width:100% !important;overflow:hidden}
+		#Head{	display:none;
+				-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;
+				background: #111111;
+				background: -moz-linear-gradient(top,  #111111 0%, #3c3c3c 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#111111), color-stop(100%,#3c3c3c));
+				background: -webkit-linear-gradient(top,  #111111 0%,#3c3c3c 100%);
+				background: -o-linear-gradient(top,  #111111 0%,#3c3c3c 100%);
+				background: -ms-linear-gradient(top,  #111111 0%,#3c3c3c 100%);
+				background: linear-gradient(to bottom,  #111111 0%,#3c3c3c 100%);
+				border: 1px solid #25567C;
+				box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+				color: white;float: left; margin: 0; padding: 10px;text-align: center;width: 100%;
+			}
+		#leftBtn{float: left; color: white; margin: 0px; font-size: 17px; font-family: Helvetica; box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);-moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);-webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);-o-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3); background: none repeat scroll 0% 0% transparent; cursor: pointer; border-top: 1px solid rgba(255, 255, 255, 0.3); border-radius: 12px 12px 12px 12px; padding: 6px 12px;}
+		#HeadingText{margin: 6px 0px; font-size: 16px; font-weight: bold; text-transform: uppercase;}
+		#rightBtn{float:left;display: none;}
+		#login{float: left;text-align: center;width: 100%;display:none;}
+		#login button{background: url('images/facebook-connect-buttons.png') no-repeat scroll center center transparent;background-size: 100% 200%;;background-border-radius: 10px ;-moz-border-radius: 10px ;-webkit-border-radius: 10px ;-o-border-radius: 10px;height: 48px;min-width: 282px;outline: 0 none;max-width: 100%;cursor: pointer;}
+		#login button:active{outline:0 none;border:1ps solid #ff0000;background-position: center center;}
+		#loader{width: 100%; height: 100%; position: absolute; background: url('images/ajax-loader.gif') no-repeat scroll center center transparent;top:0;left:0}
+	</style>
+	<script src="js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<div id="Head" >
+		<div id="leftBtn" >cancel</div>
+		<p id="HeadingText">Login</p>
+		<div id="rightBtn"></div>
+	</div>
+	<div id="login">
+		<p>
+			<br/><br/><br/>
+			<span id="log">Please Tap to Connect using Facebook</span>
+			<br/><br/>
+			<button onClick="loginUser();">&nbsp;</button>
+		</p>
+	</div>
+	<div id="loader">
+		&nbsp;
+	</div>
+	<div id="fb-root"></div>
+	<script type="text/javascript">
+	/* $('#loader').show(); */
+	var urlVars = getUrlStringVars(window.location.href);
+	
+	if(urlVars['action']==='fblogin' || urlVars['action'] === 'fblike'){
+		//no action required
+	}else{
+		
+		self.location = 'https://www.facebook.com/ebonyrestaurant';
+	}
+		window.FBObject = {};
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId : '125422720921769', // App ID
+				channelUrl : '//html5.emunching.com/facebook.html', // Channel File
+				status : true, // check login status
+				cookie : true, // enable cookies to allow the server to access the session
+				xfbml : true				
+			// parse XFBML
+			});
+
+			FB.Event.subscribe('auth.statusChange', handleStatusChange);
+			
+			//check for loggedIn User
+			FB.getLoginStatus(function(response) {
+				if (response.authResponse) {
+					$('#loader').hide();
+					$("#log").text('Redirecting...');
+				}else{
+					$('#loader').hide();
+					$('#log').text('Please Tap to Connect using Facebook');
+					$('#login').show();
+				}
+			});
+			
+		};
+
+		// Load the SDK Asynchronously
+		(function(d) {
+			var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement('script');
+			js.id = id;
+			js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			ref.parentNode.insertBefore(js, ref);
+		}(document));
+		
+		
+
+		function handleStatusChange(response){
+			$("#log").text('Processing');
+			document.body.className = response.authResponse ? 'connected' : 'not_connected';
+		    if (response.authResponse) {	//FB authorized User Exists
+		    	if(urlVars['action']==='fblike'){
+		    		fbLikeItem();
+		    	}else{
+		    		updateUserInfo(response);
+		    	}				
+			} else{
+				/* loginUser(); */
+			} 
+		}
+		
+		function updateUserInfo(response){
+		    FB.api('/me', function(response){
+		    	var stringified = $.param(response);
+		    	self.location = 'http://html5.emunching.com/facebookSuccess.html?'+stringified;
+			});
+		}
+		
+		function loginUser(){
+			self.location = 'https://www.facebook.com/dialog/oauth/?client_id=125422720921769&redirect_uri=http://html5.emunching.com/facebook.html&state=true&scope=email';
+		}
+		
+		function closeBrowser(){
+			self.location = 'http://html5.emunching.com/facebookSuccess.html';
+		}
+		
+		function getUrlStringVars(urlString){
+		    var vars = {};
+		    var parts = urlString.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+		        vars[unescape(key)] =  unescape(value);
+		    });
+		    return vars;
+		}
+		function fbLikeItem() {
+		    var obj = {
+		            method:'feed',
+		            link:urlVars.link,
+		            picture: urlVars.imgLink,
+		            name:urlVars.RestFBLink,
+		            caption:urlVars.itemName,
+		            description:urlVars.itemDesc
+		        };
+		        FB.ui(obj, function () {
+		            //redirect to facebooksuccess.html
+		        	closeBrowser();
+		        });
+	      }
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content='True' name='HandheldFriendly' />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>Emunching</title>
+	<style>
+		body{margin:0;padding:0;float:left;width:100% !important;overflow:hidden}
+		#page2{padding: 5px;}
+		#registrationForm{display: table; width: 100%; font-size: 12px;}
+		#registrationForm .formRecord{display: table-row;vertical-align: middle;width: 100%;}		
+		#registrationForm label {display: table-cell;font-size: 1.5em;line-height: normal;vertical-align: middle;width: 25%;}
+		#registrationForm input{display: table-cell;font-size: 1.5em;line-height: normal;vertical-align: middle; width: 75%; }
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
+	<!-- <link href="http://html5.emunching.com/css/style.css" type="text/css" rel="stylesheet" /> -->
+	<script src="js/jquery-1.8.2.min.js"></script>	
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#emFB"></script> -->
+</head>
+<body>
+	<div data-role="page" id="mainPage">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<h1 id="headerHeading">Registration</h1>
+			<a href="javascript:void(0)" data-role="button" class="ui-btn-right" id="fwdBtn">Register</a>			
+		</div>
+		<div data-role="content" class="pageView" data-id="page2" id="page2" style="display: none" class="appBG">
+			<p>Please Enter your Contact Number for further Communication, and we'll set up an account for you</p>
+			<form name="registerUser" method="get" action="http://html5.emunching.com/FBRegisterUserSuccess.html">
+				<div data-container="reservation">
+					<div class="contentWrapper">
+						<div id="registrationForm">
+							<div class="formRecord">
+								<label for="email" >EMAIL</label>
+								<input type="text" id="email"  value="" readonly="readonly"/>
+							</div>
+							<div class="formRecord">
+								<label for="lastname">Last Name</label>
+								<input type="text" id="lastname"/>
+							</div>
+							<div class="formRecord">
+								<label for="firstname">First NAME</label>
+								<input type="text" id="firstname"/>
+							</div>
+							<div class="formRecord">
+								<label for="contact">PHONE NUMBER</label>
+								<input type="text" id="contact"/>
+							</div>
+							<div class="formRecord">
+								<label for="reservelocation">RESERVATION LOCATION</label>
+								<select id="reservelocation">
+									<option value="38">Ebony Restaurant</option>		
+								</select>
+							</div>						
+						</div>
+					</div>
+				</div>		
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+	function getUrlStringVars(urlString){
+	    var vars = {};
+	    var parts = urlString.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+	        vars[unescape(key)] =  unescape(value);
+	    });
+	    return vars;
+	}
+	$('[data-role=page]').live('pageinit',function(){		
+		var urlVars = getUrlStringVars(window.location.href);
+		$('#email').attr('readonly',false);
+		$('#email').val(urlVars.email);
+		$('#email').attr('readonly',true);
+		$('#lastname').val(urlVars.lastname);
+		$('#firstname').val(urlVars.firstname);
+		$('#location option').attr('value',urlVars.restLocationID).val(urlVars.restLocationName);
+		$('#fwdBtn').live('click',function(e){
+			e.preventDefault();
+			if(validateForm()){
+				self.location = 'http://html5.emunching.com/FBRegisterUserSuccess.html?contact='+$('#contact').val();
+			}
+		});
+		$('form').live('submit',function(e){
+			e.preventDefault();
+			return validateForm();
+		});
+		$('#page2').show();
+		$('#mainPage').trigger('create');
+	});
+	function validateForm(){
+		if($('#firstname').val() === ''){
+			alert('First name Should not be empty');
+			return false;
+		}else if($('#lastname').val() === ''){
+			alert('Last name Should not be empty');
+			return false;
+		}else if($('#contact').val() === ''){
+			alert('Phone number Should not be empty');
+			return false;
+		}else{
+			return true;
+		}
+	}
+	</script>
+</body>
+</html>
