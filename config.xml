@@ -2,23 +2,22 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.emunching.emunching"
-        version   = "1.0.0">
-    <name>EMunching</name>
-
-    <description>
-        Emunching Restarant Application
-    </description>
-
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        Indavest Technologies
+        version   = "2.0.0">
+	<name>Ebony</name>
+	<description>
+		Ebony with a view
+	</description>
+	<author href="http://www.emunching.com" email="info@emunching.com">
+		eEngage Solutions
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
     <preference name="phonegap-version" value="2.0.0" />
-    <preference name="orientation"      value="default" />
+    <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
     
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
@@ -53,6 +52,6 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
-    
-    <gap:plugin name="ChildBrowser" /> <!-- latest release -->
+
+	<gap:plugin name="ChildBrowser" /> <!-- latest release -->
 </widget>
